@@ -7,7 +7,7 @@ Citizen.CreateThread(function()
 	end
 
 	while ESX.GetPlayerData().job == nil do
-		Citizen.Wait(10)
+		Citizen.Wait(20000)
 	end
 
 	PlayerData = ESX.GetPlayerData()
@@ -70,7 +70,7 @@ function chat(mePlayer, text)
     if jeux < 505 then
 
         TriggerEvent('chat:addMessage', {
-            template = '<div class="chat-message do" style="background-color: rgba(101, 164, 46,60%); color:#fff">' .. text .. '</div>',
+            template = '<div class="chat-message do" style="background-color: rgba(47, 161, 133,100%); color:#fff">' .. text .. '</div>',
             multiline = true,
             args = { text}
         })
@@ -85,11 +85,11 @@ function DrawText3D(x,y,z, text)
   local fov = (1 / GetGameplayCamFov()) * 350
   local scale = scale * fov
   if onScreen then
-		SetTextScale(0.50, 0.50)
-		SetTextFont(0)
+	SetTextScale(0.50, 0.50)
+	SetTextFont(0)
         SetTextProportional(1)
 
-		SetTextColour(58, 146, 127, 255)
+	SetTextColour(45, 123, 99, 255)
         BeginTextCommandDisplayText("STRING")
         SetTextCentre(true)
         AddTextComponentSubstringPlayerName(text)
